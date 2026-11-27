@@ -1,0 +1,6 @@
+{
+  "name": "NextBus SG",
+  "description": "Singapore real-time bus arrival tracker with quick 5-digit bus stop code search and saved commuter favorites.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
