@@ -10,7 +10,7 @@ import { useBusFavorites } from './hooks/useBusFavorites';
 import { busApiService } from './services/busApiService';
 import type { AppView, BusArrivalResponse } from './types/bus';
 
-const AUTO_REFRESH_INTERVAL_SEC = 15;
+const AUTO_REFRESH_INTERVAL_SEC = 20;
 const THEME_STORAGE_KEY = 'nextbus_sg_theme_v1';
 
 export default function App() {

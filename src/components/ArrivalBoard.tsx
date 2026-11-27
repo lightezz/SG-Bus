@@ -326,10 +326,11 @@ export function ArrivalBoard({
           </div>
         </div>
 
-        {/* Simulated preview notice for unlisted 5-digit codes */}
-        {arrivalData?.IsSimulatedPreview && (
+        {/* Data source notice when awaiting LTA_ACCOUNT_KEY or unlisted 5-digit stop */}
+        {arrivalData?.DataSource === 'simulation' && (
           <div className="mt-4 px-3.5 py-2.5 rounded-lg bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80 text-xs text-slate-600 dark:text-slate-300">
-            Stop <span className="font-mono-tabular font-semibold">{busStopCode}</span> is not in the offline sample directory. Displaying simulated arrival preview until your live LTA DataMall API connection is attached.
+            {arrivalData.ApiNote ??
+              `Stop ${busStopCode} is displaying simulated arrival data until LTA_ACCOUNT_KEY is configured.`}
           </div>
         )}
 

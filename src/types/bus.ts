@@ -37,7 +37,16 @@ export interface BusArrivalResponse {
   BusStopCode: string;
   Services: BusServiceArrival[];
   FetchedAt: string;
+  DataSource?: 'lta-live' | 'simulation';
+  ApiNote?: string;
   IsSimulatedPreview?: boolean;
+}
+
+export interface HealthCheckResponse {
+  status: string;
+  service: string;
+  ltaConfigured: boolean;
+  timestamp: string;
 }
 
 export interface BusStop {
